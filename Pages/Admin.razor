@@ -1,0 +1,72 @@
+﻿@page "/admin"
+@attribute [Authorize(Roles = "Admin")]
+@inject NavigationManager Navigation
+@inject IDbContextFactory<ApplicationDbContext> DbContextFactory
+
+<h3>Admin Area</h3>
+
+<div class="tw-m-4">
+    <h4>Add New User</h4>
+    <EditForm Model="newUser" OnValidSubmit="HandleSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="tw-mb-4">
+            <label class="tw-block">Name</label>
+            <InputText @bind-Value="newUser.Name" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block">Email</label>
+            <InputText @bind-Value="newUser.Email" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block">Phone Number</label>
+            <InputText @bind-Value="newUser.PhoneNo" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block">Role</label>
+            <InputText @bind-Value="newUser.Role" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <button type="submit" class="tw-bg-blue-500 tw-text-white tw-p-2 tw-rounded">Add User</button>
+    </EditForm>
+</div>
+
+<div class="tw-m-4">
+    <h4>Users</h4>
+    @if (users != null)
+    {
+        <ul class="tw-list-disc tw-ml-6">
+            @foreach (var user in users)
+            {
+                <li>
+                    @user.Name - @user.Email
+                    (Phone: @user.PhoneNo, Role: @user.Role,
+                    Created: @user.CreatedDate.ToString("g"),
+                    Updated: @user.UpdatedDate.ToString("g"))
+                </li>
+            }
+        </ul>
+    }
+</div>
+
+@code {
+    private AppUser newUser = new();
+    private List<AppUser> users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var dbContext = DbContextFactory.CreateDbContext();
+        users = await dbContext.AppUsers.ToListAsync();
+    }
+
+    private async Task HandleSubmit()
+    {
+        using var dbContext = DbContextFactory.CreateDbContext();
+        newUser.CreatedDate = DateTime.UtcNow;
+        newUser.UpdatedDate = DateTime.UtcNow; // Set initial UpdatedDate
+        dbContext.AppUsers.Add(newUser);
+        await dbContext.SaveChangesAsync();
+        newUser = new AppUser();
+        users = await dbContext.AppUsers.ToListAsync();
+        Navigation.NavigateTo("/admin");
+    }
+}

@@ -3371,6 +3371,51 @@
       ]
     },
     {
+      "Route": "css/tailwind.b9dn3wp7yk.css",
+      "AssetFile": "css/tailwind.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 17:46:20 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "b9dn3wp7yk"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA="
+        },
+        {
+          "Name": "label",
+          "Value": "css/tailwind.css"
+        }
+      ]
+    },
+    {
       "Route": "css/tailwind.css",
       "AssetFile": "css/tailwind.css",
       "Selectors": [],
@@ -3385,7 +3430,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10913"
+          "Value": "11406"
         },
         {
           "Name": "Content-Type",
@@ -3393,62 +3438,17 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc=\""
+          "Value": "\"IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:16:46 GMT"
+          "Value": "Wed, 12 Mar 2025 17:46:20 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc="
-        }
-      ]
-    },
-    {
-      "Route": "css/tailwind.oebco6yxju.css",
-      "AssetFile": "css/tailwind.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10913"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:16:46 GMT"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "oebco6yxju"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc="
-        },
-        {
-          "Name": "label",
-          "Value": "css/tailwind.css"
+          "Value": "sha256-IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA="
         }
       ]
     },

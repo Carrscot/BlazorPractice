@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LCXHToDUGbn1hhcv2xzF0QdsOchpGEtRMNM8WL5S4uk=",
+  "Hash": "AJA6gPzs8wTmnsK9C9MnwIaohKDchsGEb+VVNkcbHzI=",
   "Source": "PracticeApp",
   "BasePath": "_content/PracticeApp",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PracticeApp\\wwwroot",
       "Source": "PracticeApp",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css",
+      "Identity": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css",
       "SourceId": "PracticeApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "PracticeApp#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "y5o7RvmrGdZ6nPg5gMq7e7N5tB4JSTs+cQuTIGWmibU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css"
+      "OriginalItemSpec": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css",
+      "Identity": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css",
       "SourceId": "PracticeApp",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "PracticeApp#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "y5o7RvmrGdZ6nPg5gMq7e7N5tB4JSTs+cQuTIGWmibU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\app.css",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\app.css",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/app#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\css\\app.css"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/bootstrap/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic#[.{fingerprint}]?.eot",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic#[.{fingerprint}]?.otf",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic#[.{fingerprint}]?.svg",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic#[.{fingerprint}]?.ttf",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic#[.{fingerprint}]?.woff",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/FONT-LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/ICON-LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -290,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/open-iconic/README#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\site.css",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\css\\tailwind.css",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\tailwind.css",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "css/tailwind#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -346,17 +346,17 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "oebco6yxju",
-      "Integrity": "wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc=",
+      "Fingerprint": "b9dn3wp7yk",
+      "Integrity": "IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\tailwind.css"
     },
     {
-      "Identity": "C:\\Personal\\PracticeApp\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Personal\\BlazorPractice\\wwwroot\\favicon.ico",
       "SourceId": "PracticeApp",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Personal\\PracticeApp\\wwwroot\\",
+      "ContentRoot": "C:\\Personal\\BlazorPractice\\wwwroot\\",
       "BasePath": "_content/PracticeApp",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -1637,7 +1637,7 @@
   "Endpoints": [
     {
       "Route": "css/app.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\app.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1674,7 +1674,7 @@
     },
     {
       "Route": "css/app.p10z1o5xx4.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\app.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\app.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1719,7 +1719,7 @@
     },
     {
       "Route": "css/bootstrap/bootstrap.min.bpk8xqwxhs.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1764,7 +1764,7 @@
     },
     {
       "Route": "css/bootstrap/bootstrap.min.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1801,7 +1801,7 @@
     },
     {
       "Route": "css/bootstrap/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1846,7 +1846,7 @@
     },
     {
       "Route": "css/bootstrap/bootstrap.min.css.map",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1883,7 +1883,7 @@
     },
     {
       "Route": "css/open-iconic/font/css/open-iconic-bootstrap.min.cmapd0fi15.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1928,7 +1928,7 @@
     },
     {
       "Route": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1965,7 +1965,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.0uw8dim9nl.eot",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2010,7 +2010,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.eot",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2047,7 +2047,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.h4d0pazwgy.woff",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2092,7 +2092,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.ll5grcv8wv.ttf",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2137,7 +2137,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.otf",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2174,7 +2174,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.sjnzgf7e1h.svg",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2219,7 +2219,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.svg",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2256,7 +2256,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.ttf",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2293,7 +2293,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.wk8x8xm0ah.otf",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2338,7 +2338,7 @@
     },
     {
       "Route": "css/open-iconic/font/fonts/open-iconic.woff",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2375,7 +2375,7 @@
     },
     {
       "Route": "css/open-iconic/FONT-LICENSE",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2412,7 +2412,7 @@
     },
     {
       "Route": "css/open-iconic/FONT-LICENSE.48tmkg660f",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2457,7 +2457,7 @@
     },
     {
       "Route": "css/open-iconic/ICON-LICENSE",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2494,7 +2494,7 @@
     },
     {
       "Route": "css/open-iconic/ICON-LICENSE.4dwjve0o0b",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2539,7 +2539,7 @@
     },
     {
       "Route": "css/open-iconic/README.8h4oiah9s0.md",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\README.md",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\README.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2584,7 +2584,7 @@
     },
     {
       "Route": "css/open-iconic/README.md",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\open-iconic\\README.md",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\open-iconic\\README.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2621,7 +2621,7 @@
     },
     {
       "Route": "css/site.1fpfb6x0uo.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2666,7 +2666,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2702,8 +2702,8 @@
       ]
     },
     {
-      "Route": "css/tailwind.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\tailwind.css",
+      "Route": "css/tailwind.b9dn3wp7yk.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\tailwind.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2712,7 +2712,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "10913"
+          "Value": "11406"
         },
         {
           "Name": "Content-Type",
@@ -2720,48 +2720,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc=\""
+          "Value": "\"IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:16:46 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc="
-        }
-      ]
-    },
-    {
-      "Route": "css/tailwind.oebco6yxju.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\css\\tailwind.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "10913"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 11 Mar 2025 16:16:46 GMT"
+          "Value": "Wed, 12 Mar 2025 17:46:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2771,7 +2734,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "oebco6yxju"
+          "Value": "b9dn3wp7yk"
         },
         {
           "Name": "label",
@@ -2779,13 +2742,50 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-wBTx6mqPKrl/nWOhiJ384NW5fYv7l/qfDlsXElOlXLc="
+          "Value": "sha256-IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA="
+        }
+      ]
+    },
+    {
+      "Route": "css/tailwind.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\css\\tailwind.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 12 Mar 2025 17:46:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IaqPxfavD2fDVxXIaU8s2mWo4bQskfb+swdfmz/BkvA="
         }
       ]
     },
     {
       "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2830,7 +2830,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "C:\\Personal\\PracticeApp\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5087,7 +5087,7 @@
     },
     {
       "Route": "PracticeApp.bundle.scp.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5124,7 +5124,7 @@
     },
     {
       "Route": "PracticeApp.j2r7uy31c5.bundle.scp.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\PracticeApp.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5169,7 +5169,7 @@
     },
     {
       "Route": "PracticeApp.j2r7uy31c5.styles.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5214,7 +5214,7 @@
     },
     {
       "Route": "PracticeApp.styles.css",
-      "AssetFile": "C:\\Personal\\PracticeApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css",
+      "AssetFile": "C:\\Personal\\BlazorPractice\\obj\\Debug\\net6.0\\scopedcss\\bundle\\PracticeApp.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
