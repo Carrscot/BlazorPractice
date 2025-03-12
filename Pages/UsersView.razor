@@ -1,0 +1,54 @@
+﻿@page "/usersView"
+@attribute [Authorize]
+@inject IDbContextFactory<ApplicationDbContext> DbContextFactory
+
+<h3>User List</h3>
+
+<div class="tw-m-4">
+    @if (users == null)
+    {
+        <p class="tw-text-gray-500">Loading...</p>
+    }
+    else if (users.Count == 0)
+    {
+        <p class="tw-text-gray-500">No users found.</p>
+    }
+    else
+    {
+        <table class="tw-w-full tw-border-collapse tw-border tw-border-gray-300">
+            <thead>
+                <tr class="tw-bg-gray-100">
+                    <th class="tw-border tw-p-2 tw-text-left">Name</th>
+                    <th class="tw-border tw-p-2 tw-text-left">Email</th>
+                    <th class="tw-border tw-p-2 tw-text-left">Phone Number</th>
+                    <th class="tw-border tw-p-2 tw-text-left">Role</th>
+                    <th class="tw-border tw-p-2 tw-text-left">Created</th>
+                    <th class="tw-border tw-p-2 tw-text-left">Updated</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in users)
+                {
+                    <tr class="tw-hover:bg-gray-50">
+                        <td class="tw-border tw-p-2">@user.Name</td>
+                        <td class="tw-border tw-p-2">@user.Email</td>
+                        <td class="tw-border tw-p-2">@user.PhoneNo</td>
+                        <td class="tw-border tw-p-2">@user.Role</td>
+                        <td class="tw-border tw-p-2">@user.CreatedDate.ToString("g")</td>
+                        <td class="tw-border tw-p-2">@user.UpdatedDate.ToString("g")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private List<AppUser> users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        using var dbContext = DbContextFactory.CreateDbContext();
+        users = await dbContext.AppUsers.ToListAsync();
+    }
+}
