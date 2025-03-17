@@ -120,18 +120,24 @@
         try
         {
             var response = await _httpClient.GetAsync("api/appusers");
+
+            // Log the full response
             await JS.InvokeVoidAsync("console.log", $"Status: {response.StatusCode}");
             var content = await response.Content.ReadAsStringAsync();
-            await JS.InvokeVoidAsync("console.log", $"Content: {content}");
+            await JS.InvokeVoidAsync("console.log", $"Response content: {content}");
+
             if (response.IsSuccessStatusCode)
             {
                 users = await response.Content.ReadFromJsonAsync<List<AppUser>>();
-                await JS.InvokeVoidAsync("console.log", $"Loaded {users.Count} users");
             }
         }
         catch (Exception ex)
         {
             await JS.InvokeVoidAsync("console.log", $"Error loading users: {ex.Message}");
+            if (ex.InnerException != null)
+            {
+                await JS.InvokeVoidAsync("console.log", $"Inner exception: {ex.InnerException.Message}");
+            }
         }
     }
 

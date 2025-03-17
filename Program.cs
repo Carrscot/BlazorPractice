@@ -2,6 +2,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PracticeApp.Data;
 using PracticeApp.Services;
+using System.Net;
+using System.Net.Http;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +18,15 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
 .AddRoles<IdentityRole>()
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+// Add HttpContextAccessor
+builder.Services.AddHttpContextAccessor();
+
+// Register the custom handler
+builder.Services.AddTransient<CookieHandler>();
+
+// Add logging
+builder.Services.AddLogging();
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
     options.UseNpgsql(connectionString));
@@ -23,8 +36,9 @@ builder.Services.AddScoped<IAppUserService, AppUserService>();
 builder.Services.AddControllers();
 builder.Services.AddHttpClient("AppUsersApi", client =>
 {
-    client.BaseAddress = new Uri("https://localhost:7093/");
-});
+    client.BaseAddress = new Uri(builder.Configuration["ApplicationUrl"] ?? "https://localhost:7093/");
+})
+.AddHttpMessageHandler<CookieHandler>();
 
 // Seed admin
 using (var scope = builder.Services.BuildServiceProvider().CreateScope())
