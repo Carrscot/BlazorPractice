@@ -1,0 +1,20 @@
+﻿<div class="@(IsVisible ? "tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-50 tw-flex tw-items-center tw-justify-center" : "tw-hidden")">
+    <div class="tw-bg-white tw-p-6 tw-rounded tw-shadow-lg tw-max-w-sm">
+        <h3 class="tw-text-lg tw-font-bold tw-mb-4">Access Denied</h3>
+        <p class="tw-mb-4">You do not have permission to perform this action.</p>
+        <button @onclick="Close" class="tw-bg-blue-500 tw-text-white tw-p-2 tw-rounded">OK</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public bool IsVisible { get; set; } = false;
+
+    [Parameter]
+    public EventCallback OnClose { get; set; }
+
+    private async Task Close()
+    {
+        await OnClose.InvokeAsync();
+    }
+}

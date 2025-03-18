@@ -1,0 +1,61 @@
+﻿<EditForm Model="User" OnValidSubmit="HandleSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="tw-m-4">
+        <h4>@Title</h4>
+        <div class="tw-mb-4">
+            <label class="tw-block">Name</label>
+            <InputText @bind-Value="User.Name" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block">Email</label>
+            <InputText @bind-Value="User.Email" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block">Phone Number</label>
+            <InputText @bind-Value="User.PhoneNo" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <div class="tw-mb-4">
+            <label class="tw-block">Role</label>
+            <InputText @bind-Value="User.Role" class="tw-border tw-p-2 tw-w-full" />
+        </div>
+        <button type="submit" class="@($"tw-bg-{SubmitButtonColor}-500 tw-text-white tw-p-2 tw-rounded")">@SubmitButtonText</button>
+        @if (ShowCancelButton)
+        {
+            <button @onclick="Cancel" class="tw-bg-gray-500 tw-text-white tw-p-2 tw-rounded tw-ml-2">Cancel</button>
+        }
+    </div>
+</EditForm>
+
+@code {
+    [Parameter]
+    public AppUser User { get; set; }
+
+    [Parameter]
+    public string Title { get; set; } = "Add New User";
+
+    [Parameter]
+    public string SubmitButtonText { get; set; } = "Add User";
+
+    [Parameter]
+    public string SubmitButtonColor { get; set; } = "blue";
+
+    [Parameter]
+    public bool ShowCancelButton { get; set; } = false;
+
+    [Parameter]
+    public EventCallback OnSubmit { get; set; }
+
+    [Parameter]
+    public EventCallback OnCancel { get; set; }
+
+    private async Task HandleSubmit()
+    {
+        await OnSubmit.InvokeAsync();
+    }
+
+    private async Task Cancel()
+    {
+        await OnCancel.InvokeAsync();
+    }
+}

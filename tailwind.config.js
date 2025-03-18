@@ -5,6 +5,11 @@ module.exports = {
     extend: {},
   },
     plugins: [],
-    prefix: "tw-"
+    prefix: "tw-",
+    safelist: [
+        'tw-bg-blue-500',
+        'tw-bg-green-500',
+        'tw-bg-gray-500',
+    ],
 }
 

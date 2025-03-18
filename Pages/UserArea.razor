@@ -1,11 +1,10 @@
-﻿@page "/admin"
-@attribute [Authorize(Roles = "Admin")]
-@using Microsoft.JSInterop
+﻿@page "/users"
+@attribute [Authorize]
 @inject IHttpClientFactory HttpFactory
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
 
-<h3>Admin Area</h3>
+<h3>User Area</h3>
 
 <UserForm User="newUser" OnSubmit="HandleSubmit" />
 
@@ -62,11 +61,14 @@
         OnCancel="CancelEdit" />
 }
 
+<AccessDeniedModal IsVisible="showAccessDeniedModal" OnClose="CloseModal" />
+
 @code {
     private AppUser newUser = new();
     private List<AppUser> users;
     private AppUser editingUser;
     private HttpClient _httpClient => HttpFactory.CreateClient("AppUsersApi");
+    private bool showAccessDeniedModal = false;
     private static readonly TimeZoneInfo SAST = TimeZoneInfo.FindSystemTimeZoneById(
         OperatingSystem.IsWindows() ? "South Africa Standard Time" : "Africa/Johannesburg");
 
@@ -80,24 +82,22 @@
         try
         {
             var response = await _httpClient.GetAsync("api/appusers");
-
-            // Log the full response
-            await JS.InvokeVoidAsync("console.log", $"Status: {response.StatusCode}");
+            await JS.InvokeVoidAsync("console.log", $"Load Status: {response.StatusCode}");
             var content = await response.Content.ReadAsStringAsync();
-            await JS.InvokeVoidAsync("console.log", $"Response content: {content}");
-
+            await JS.InvokeVoidAsync("console.log", $"Load Response: {content}");
             if (response.IsSuccessStatusCode)
             {
                 users = await response.Content.ReadFromJsonAsync<List<AppUser>>();
+                await JS.InvokeVoidAsync("console.log", $"Loaded {users.Count} users");
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                Navigation.NavigateTo("/Identity/Account/Login");
             }
         }
         catch (Exception ex)
         {
             await JS.InvokeVoidAsync("console.log", $"Error loading users: {ex.Message}");
-            if (ex.InnerException != null)
-            {
-                await JS.InvokeVoidAsync("console.log", $"Inner exception: {ex.InnerException.Message}");
-            }
         }
     }
 
@@ -112,6 +112,10 @@
                 newUser = new AppUser();
                 await LoadUsers();
             }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                showAccessDeniedModal = true;
+            }
         }
         catch (Exception ex)
         {
@@ -122,15 +126,15 @@
     private void EditUser(AppUser user)
     {
         editingUser = new AppUser
-            {
-                Id = user.Id,
-                Name = user.Name,
-                Email = user.Email,
-                PhoneNo = user.PhoneNo,
-                Role = user.Role,
-                CreatedDate = user.CreatedDate,
-                UpdatedDate = user.UpdatedDate
-            };
+        {
+            Id = user.Id,
+            Name = user.Name,
+            Email = user.Email,
+            PhoneNo = user.PhoneNo,
+            Role = user.Role,
+            CreatedDate = user.CreatedDate,
+            UpdatedDate = user.UpdatedDate
+        };
     }
 
     private async Task HandleEditSubmit()
@@ -143,6 +147,11 @@
             {
                 editingUser = null;
                 await LoadUsers();
+            }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                showAccessDeniedModal = true;
+                await JS.InvokeVoidAsync("console.log", $"Modal set to: {showAccessDeniedModal}");
             }
         }
         catch (Exception ex)
@@ -161,11 +170,21 @@
             {
                 await LoadUsers();
             }
+            else if (response.StatusCode == System.Net.HttpStatusCode.Forbidden || response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+            {
+                showAccessDeniedModal = true;
+            }
         }
         catch (Exception ex)
         {
             await JS.InvokeVoidAsync("console.log", $"Error deleting user: {ex.Message}");
         }
+    }
+
+    private Task CloseModal()
+    {
+        showAccessDeniedModal = false;
+        return Task.CompletedTask; // Return Task for async compatibility
     }
 
     private Task CancelEdit()

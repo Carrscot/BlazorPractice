@@ -25,7 +25,12 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddTransient<CookieHandler>();
 
 // Add logging
-builder.Services.AddLogging();
+builder.Services.AddLogging(logging =>
+{
+    logging.AddConsole();
+    logging.AddDebug();
+    logging.SetMinimumLevel(LogLevel.Debug);
+});
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
@@ -33,12 +38,41 @@ builder.Services.AddDbContextFactory<ApplicationDbContext>(options =>
 
 // Add services and controllers
 builder.Services.AddScoped<IAppUserService, AppUserService>();
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
+    options.JsonSerializerOptions.WriteIndented = true;
+});
 builder.Services.AddHttpClient("AppUsersApi", client =>
 {
     client.BaseAddress = new Uri(builder.Configuration["ApplicationUrl"] ?? "https://localhost:7093/");
 })
 .AddHttpMessageHandler<CookieHandler>();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Events.OnRedirectToAccessDenied = context =>
+    {
+        if (context.Request.Path.StartsWithSegments("/api"))
+        {
+            context.Response.StatusCode = StatusCodes.Status403Forbidden;
+            return Task.CompletedTask;
+        }
+        context.Response.Redirect(context.RedirectUri);
+        return Task.CompletedTask;
+    };
+    options.Events.OnRedirectToLogin = context =>
+    {
+        if (context.Request.Path.StartsWithSegments("/api"))
+        {
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            return Task.CompletedTask;
+        }
+        context.Response.Redirect(context.RedirectUri);
+        return Task.CompletedTask;
+    };
+});
 
 // Seed admin
 using (var scope = builder.Services.BuildServiceProvider().CreateScope())
