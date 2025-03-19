@@ -1,8 +1,4 @@
-﻿using System.Net;
-using System.Net.Http;
-using Microsoft.AspNetCore.Http;
-
-public class CookieHandler : DelegatingHandler
+﻿public class CookieHandler : DelegatingHandler
 {
     private readonly IHttpContextAccessor _httpContextAccessor;
     private readonly ILogger<CookieHandler> _logger;
