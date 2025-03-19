@@ -1,5 +1,5 @@
 ﻿@page "/usersView"
-@attribute [Authorize]
+@attribute [AllowAnonymous]
 @inject IDbContextFactory<ApplicationDbContext> DbContextFactory
 
 <h3>User List</h3>
@@ -29,7 +29,7 @@
             <tbody>
                 @foreach (var user in users)
                 {
-                    <tr class="tw-hover:bg-gray-50">
+                    <tr class="hover:tw-bg-gray-50 tw-transition-colors tw-duration-150">
                         <td class="tw-border tw-p-2">@user.Name</td>
                         <td class="tw-border tw-p-2">@user.Email</td>
                         <td class="tw-border tw-p-2">@user.PhoneNo</td>

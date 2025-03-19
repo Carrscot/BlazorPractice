@@ -4,64 +4,81 @@
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
 
-<h3>User Area</h3>
+<div class="tw-min-h-screen tw-bg-gray-100 tw-py-6">
+    <div class="tw-max-w-5xl tw-mx-auto">
+        <h3 class="tw-text-2xl tw-font-bold tw-mb-6 tw-text-gray-800">User Area</h3>
 
-<UserForm User="newUser" OnSubmit="HandleSubmit" />
+        <div class="tw-bg-white tw-shadow tw-rounded-lg tw-p-6 tw-mb-6">
+            <UserForm User="newUser" OnSubmit="HandleSubmit" />
+        </div>
 
-<div class="tw-m-4">
-    <h4>Users</h4>
-    @if (users != null)
-    {
-        <table class="tw-w-full tw-border-collapse tw-border tw-border-gray-300">
-            <thead>
-                <tr class="tw-bg-gray-100">
-                    <th class="tw-border tw-p-2">Name</th>
-                    <th class="tw-border tw-p-2">Email</th>
-                    <th class="tw-border tw-p-2">Phone</th>
-                    <th class="tw-border tw-p-2">Role</th>
-                    <th class="tw-border tw-p-2">Created</th>
-                    <th class="tw-border tw-p-2">Updated</th>
-                    <th class="tw-border tw-p-2">Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var user in users)
-                {
-                    <tr>
-                        <td class="tw-border tw-p-2">@user.Name</td>
-                        <td class="tw-border tw-p-2">@user.Email</td>
-                        <td class="tw-border tw-p-2">@user.PhoneNo</td>
-                        <td class="tw-border tw-p-2">@user.Role</td>
-                        <td class="tw-border tw-p-2">@ToSAST(user.CreatedDate).ToString("g")</td>
-                        <td class="tw-border tw-p-2">@ToSAST(user.UpdatedDate).ToString("g")</td>
-                        <td class="tw-border tw-p-2">
-                            <button @onclick="() => EditUser(user)" class="tw-bg-yellow-500 tw-text-white tw-p-1 tw-rounded tw-mr-2">Edit</button>
-                            <button @onclick="() => DeleteUser(user.Id)" class="tw-bg-red-500 tw-text-white tw-p-1 tw-rounded">Delete</button>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    }
-    else
-    {
-        <p>Loading users...</p>
-    }
+        <div class="tw-bg-white tw-shadow tw-rounded-lg tw-p-6">
+            <h4 class="tw-text-xl tw-font-semibold tw-mb-4 tw-text-gray-700">Users</h4>
+            @if (users != null)
+            {
+                <table class="tw-w-full tw-border-collapse tw-border tw-border-gray-300">
+                    <thead>
+                        <tr class="tw-bg-gray-100">
+                            <th class="tw-border tw-p-2 tw-text-left">Name</th>
+                            <th class="tw-border tw-p-2 tw-text-left">Email</th>
+                            <th class="tw-border tw-p-2 tw-text-left">Phone</th>
+                            <th class="tw-border tw-p-2 tw-text-left">Role</th>
+                            <th class="tw-border tw-p-2 tw-text-left">Created</th>
+                            <th class="tw-border tw-p-2 tw-text-left">Updated</th>
+                            <th class="tw-border tw-p-2 tw-text-left">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var user in users)
+                        {
+                            <tr class="hover:tw-bg-gray-50 tw-transition-colors tw-duration-150">
+                                <td class="tw-border tw-p-2">@user.Name</td>
+                                <td class="tw-border tw-p-2">@user.Email</td>
+                                <td class="tw-border tw-p-2">@user.PhoneNo</td>
+                                <td class="tw-border tw-p-2">@user.Role</td>
+                                <td class="tw-border tw-p-2">@ToSAST(user.CreatedDate).ToString("g")</td>
+                                <td class="tw-border tw-p-2">@ToSAST(user.UpdatedDate).ToString("g")</td>
+                                <td class="tw-border tw-p-2">
+                                    <div class="tw-flex tw-space-x-2">
+                                        <button @onclick="() => EditUser(user)"
+                                                class="tw-bg-yellow-500 tw-text-white tw-font-medium tw-py-1 tw-px-3 tw-rounded
+                                                       hover:tw-bg-yellow-600 tw-transition-all tw-duration-200
+                                                       hover:tw-shadow-md active:tw-transform active:tw-scale-95">
+                                            Edit
+                                        </button>
+                                        <button @onclick="() => DeleteUser(user.Id)"
+                                                class="tw-bg-red-500 tw-text-white tw-font-medium tw-py-1 tw-px-3 tw-rounded
+                                                       hover:tw-bg-red-600 tw-transition-all tw-duration-200
+                                                       hover:tw-shadow-md active:tw-transform active:tw-scale-95">
+                                            Delete
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p class="tw-text-gray-500">Loading users...</p>
+            }
+        </div>
+
+        @if (editingUser != null)
+        {
+            <UserForm User="editingUser"
+                      Title="Edit User"
+                      SubmitButtonText="Save"
+                      SubmitButtonColor="green"
+                      ShowCancelButton="true"
+                      OnSubmit="HandleEditSubmit"
+                      OnCancel="CancelEdit" />
+        }
+
+        <AccessDeniedModal IsVisible="showAccessDeniedModal" OnClose="CloseModal" />
+    </div>
 </div>
-
-@if (editingUser != null)
-{
-    <UserForm 
-        User="editingUser" 
-        Title="Edit User" 
-        SubmitButtonText="Save" 
-        SubmitButtonColor="green" 
-        ShowCancelButton="true" 
-        OnSubmit="HandleEditSubmit" 
-        OnCancel="CancelEdit" />
-}
-
-<AccessDeniedModal IsVisible="showAccessDeniedModal" OnClose="CloseModal" />
 
 @code {
     private AppUser newUser = new();
@@ -126,15 +143,15 @@
     private void EditUser(AppUser user)
     {
         editingUser = new AppUser
-        {
-            Id = user.Id,
-            Name = user.Name,
-            Email = user.Email,
-            PhoneNo = user.PhoneNo,
-            Role = user.Role,
-            CreatedDate = user.CreatedDate,
-            UpdatedDate = user.UpdatedDate
-        };
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Email = user.Email,
+                PhoneNo = user.PhoneNo,
+                Role = user.Role,
+                CreatedDate = user.CreatedDate,
+                UpdatedDate = user.UpdatedDate
+            };
     }
 
     private async Task HandleEditSubmit()

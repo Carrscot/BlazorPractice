@@ -1,29 +1,42 @@
 ﻿<EditForm Model="User" OnValidSubmit="HandleSubmit">
     <DataAnnotationsValidator />
-    <ValidationSummary />
     <div class="tw-m-4">
-        <h4>@Title</h4>
-        <div class="tw-mb-4">
-            <label class="tw-block">Name</label>
-            <InputText @bind-Value="User.Name" class="tw-border tw-p-2 tw-w-full" />
+        <h4 class="tw-text-xl tw-font-semibold tw-text-gray-700 tw-mb-6">@Title</h4>
+        <div class="tw-mb-6">
+            <label class="tw-block tw-text-gray-600 tw-font-medium tw-mb-1">Name</label>
+            <InputText @bind-Value="User.Name" class="tw-w-full tw-p-3 tw-border tw-border-gray-300 tw-rounded-lg tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-blue-500 tw-focus:border-blue-500 tw-transition tw-duration-150" />
+            <ValidationMessage For="() => User.Name" class="tw-text-red-500 tw-text-sm tw-mt-1" />
         </div>
-        <div class="tw-mb-4">
-            <label class="tw-block">Email</label>
-            <InputText @bind-Value="User.Email" class="tw-border tw-p-2 tw-w-full" />
+        <div class="tw-mb-6">
+            <label class="tw-block tw-text-gray-600 tw-font-medium tw-mb-1">Email</label>
+            <InputText @bind-Value="User.Email" class="tw-w-full tw-p-3 tw-border tw-border-gray-300 tw-rounded-lg tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-blue-500 tw-focus:border-blue-500 tw-transition tw-duration-150" />
+            <ValidationMessage For="() => User.Email" class="tw-text-red-500 tw-text-sm tw-mt-1" />
         </div>
-        <div class="tw-mb-4">
-            <label class="tw-block">Phone Number</label>
-            <InputText @bind-Value="User.PhoneNo" class="tw-border tw-p-2 tw-w-full" />
+        <div class="tw-mb-6">
+            <label class="tw-block tw-text-gray-600 tw-font-medium tw-mb-1">Phone Number</label>
+            <InputText @bind-Value="User.PhoneNo" class="tw-w-full tw-p-3 tw-border tw-border-gray-300 tw-rounded-lg tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-blue-500 tw-focus:border-blue-500 tw-transition tw-duration-150" />
+            <ValidationMessage For="() => User.PhoneNo" class="tw-text-red-500 tw-text-sm tw-mt-1" />
         </div>
-        <div class="tw-mb-4">
-            <label class="tw-block">Role</label>
-            <InputText @bind-Value="User.Role" class="tw-border tw-p-2 tw-w-full" />
+        <div class="tw-mb-6">
+            <label class="tw-block tw-text-gray-600 tw-font-medium tw-mb-1">Role</label>
+            <InputText @bind-Value="User.Role" class="tw-w-full tw-p-3 tw-border tw-border-gray-300 tw-rounded-lg tw-focus:outline-none tw-focus:ring-2 tw-focus:ring-blue-500 tw-focus:border-blue-500 tw-transition tw-duration-150" />
+            <ValidationMessage For="() => User.Role" class="tw-text-red-500 tw-text-sm tw-mt-1" />
         </div>
-        <button type="submit" class="@($"tw-bg-{SubmitButtonColor}-500 tw-text-white tw-p-2 tw-rounded")">@SubmitButtonText</button>
-        @if (ShowCancelButton)
-        {
-            <button @onclick="Cancel" class="tw-bg-gray-500 tw-text-white tw-p-2 tw-rounded tw-ml-2">Cancel</button>
-        }
+        <div class="tw-flex tw-space-x-4">
+            <button type="submit" 
+            class="@($"tw-bg-{SubmitButtonColor}-500 tw-text-white tw-font-medium tw-py-2 tw-px-5 tw-rounded hover:tw-bg-{SubmitButtonColor}-800 tw-transition-all tw-duration-200 hover:tw-shadow-md active:tw-transform active:tw-scale-95")">
+        @SubmitButtonText
+    </button>
+            @if (ShowCancelButton)
+            {
+                <button @onclick="Cancel"
+                        class="tw-bg-gray-500 tw-text-white tw-font-medium tw-py-2 tw-px-5 tw-rounded
+                               hover:tw-bg-gray-600 tw-transition-all tw-duration-200
+                               hover:tw-shadow-md active:tw-transform active:tw-scale-95">
+                    Cancel
+                </button>
+            }
+        </div>
     </div>
 </EditForm>
 
