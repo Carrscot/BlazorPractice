@@ -71,21 +71,24 @@ builder.Services.ConfigureApplicationCookie(options =>
     };
 });
 
-// Seed admin
-using (var scope = builder.Services.BuildServiceProvider().CreateScope())
+// Seed Admin > Skip seeding for EF commands
+if (!args.Any(arg => arg.Contains("ef")))
 {
-    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-    if (!await roleManager.RoleExistsAsync("Admin"))
+    using (var scope = builder.Services.BuildServiceProvider().CreateScope())
     {
-        await roleManager.CreateAsync(new IdentityRole("Admin"));
-    }
-    var adminUser = await userManager.FindByEmailAsync("admin@example.com");
-    if (adminUser == null)
-    {
-        adminUser = new IdentityUser { UserName = "admin@example.com", Email = "admin@example.com" };
-        await userManager.CreateAsync(adminUser, "Admin123!");
-        await userManager.AddToRoleAsync(adminUser, "Admin");
+        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+        if (!await roleManager.RoleExistsAsync("Admin"))
+        {
+            await roleManager.CreateAsync(new IdentityRole("Admin"));
+        }
+        var adminUser = await userManager.FindByEmailAsync("admin@example.com");
+        if (adminUser == null)
+        {
+            adminUser = new IdentityUser { UserName = "admin@example.com", Email = "admin@example.com" };
+            await userManager.CreateAsync(adminUser, "Admin123!");
+            await userManager.AddToRoleAsync(adminUser, "Admin");
+        }
     }
 }
 
