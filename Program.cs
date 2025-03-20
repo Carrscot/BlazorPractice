@@ -72,7 +72,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 // Seed Admin > Skip seeding for EF commands
-if (!args.Any(arg => arg.Contains("ef")))
+if (!Environment.CommandLine.Contains("ef", StringComparison.OrdinalIgnoreCase))
 {
     using (var scope = builder.Services.BuildServiceProvider().CreateScope())
     {
