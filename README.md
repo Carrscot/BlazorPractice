@@ -29,12 +29,13 @@ Future Enhancements:
 - Visual Studio 2022
 
 ## Setup
-1. Open Project and restore .NET pacakges using 'dotnet restore' in the terminal
+1. Open Project in VS 2022 and restore .NET pacakges using 'dotnet restore' in the terminal
 2. Ensure docker is installed and start PostgreSQL in docker using the following in the terminal:
 	'docker run --name practiceapp-db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=admin123 -e POSTGRES_DB=practiceapp -p 5432:5432 -d postgres:16'
 3. Verify the default connection in appsettings.json:
     "DefaultConnection": "Host=localhost;Port=5432;Database=practiceapp;Username=postgres;Password=admin123"
 4. Apply Migrations using 'dotnet ef database update' in the terminal
+	> If this command does not exist run the command :dotnet tool install --global dotnet-ef --version 6.0.36 first and then try again it should work 
 5. Install Tailwind and node dependencies using 'npm install' in the terminal.
 	If Css doesn't work correctly on app load open a separate terminal, navigate to the project folder directory and run 'npm run watch-css' and reload the project.
 6. Run the App using 'dotnet run' in the terminal or hit the launch button in visual studio.
